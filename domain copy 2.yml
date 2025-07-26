@@ -1,0 +1,329 @@
+version: '3.1'
+intents:
+  - affirm
+  - deny
+  - make_call_name
+  - make_call_number
+  - multiple_contact_record_case
+  - no_contact_record_case
+  - send_message
+entities:
+  - receiver_name
+  - receiver_number
+  - message_receiver_name
+  - message_send_text
+slots:
+  receiver_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: receiver_name
+  receiver_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: receiver_number
+  app_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: app_name
+  account_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: account_number
+  amount:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: amount
+  message_receiver_name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: message_receiver_name
+  message_send_text:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: message_send_text
+forms:
+  message_send_form:
+    ignored_intents: 
+      # - chitchat
+    required_slots:
+    - message_receiver_name
+    - message_send_text
+# actions:
+  # - action_deactivate_loop
+  # - utter_message_receiver_name_deny
+responses:
+  utter_no_contact_record_case:
+  - text: क्षमा गर्नुहोस्, कुनै सम्पर्क रेकर्ड फेला परेन।
+  - text: तपाईंको खोजी अनुसार कुनै सम्पर्क विवरण उपलब्ध छैन।
+  - text: अफसोस, यहाँ कुनै सम्पर्क भेटिएन।
+  - text: माफी चाहन्छु, तपाईँको सोधपुछमा कुनै विवरण फेला परेन।
+  - text: खोजी गर्दा कुनै पनि सम्पर्क रेकर्ड भेटिएन।
+  - text: तपाईंको सोध विरुद्ध कुनै पनि सम्पर्क फेला परेन।
+  - text: दुर्भाग्यवश, यहाँ कुनै सम्पर्क जानकारी उपलब्ध छैन।
+  - text: अनुरोध गरिएको सम्पर्कको कुनै रेकर्ड छैन।
+  - text: तपाईँको खोजीमा कुनै डेटा भेटिएन।
+  - text: क्षमा गर्नुहोस्, यो विवरण मेटाइएको वा उपलब्ध छैन।
+  - text: तपाईंको खोजी अनुसारको कुनै सम्पर्क भेटिएन।
+  - text: कुनै सम्पर्क फेला परेन।
+  - text: सोधिएको सम्पर्क रेकर्डमा छैन।
+  - text: यो जानकारी हामीलाई प्राप्त भएन।
+  - text: तपाईंको खोजीमा कुनै उपयुक्त सम्पर्क खोज्न सकिएन।
+  - text: कुनै पनि सम्बन्धित सम्पर्क विवरण उपलब्ध छैन।
+  - text: यो व्यक्तिको कुनै सम्पर्क रेकर्डमा छैन।
+  - text: तपाईँले खोज्नुभएको कुनै सम्पर्क म पहुँच गर्न सकिनँ।
+  - text: तपाईंले दिएको विवरण अनुसार कुनै सम्पर्क भेटिएन।
+  - text: तपाईंको अनुरोधको कुनै डाटा नभेटियो।
+  - text: तपाईंको खोज अनुसार कुनै पनि सम्पर्क भेटिएन।
+  - text: कुनै पनि सम्बन्धित सम्पर्क सूचि उपलब्ध छैन।
+  - text: तपाईँको खोज अनुरुप कुनै सम्पर्क उपलब्ध छैन।
+  - text: माफ गर्नुहोस्, तपाईँले सोधेको सम्पर्कको कुनै जानकारी भेटिएन।
+  - text: तपाईँले खोज्नुभएको सम्पर्क प्राप्त भेटिएन।
+  utter_multiple_contact_record_case:
+  - text: कृपया स्पष्ट गर्नुहोस्, तपाईं कुन सम्पर्कमा कल गर्न चाहनुहुन्छ?
+  - text: धेरै सम्पर्क फेला परेका छन्, कृपया कुन चाहन्छौं भन्नुहोस्।
+  - text: तपाईंले खोजेको नाममा एकभन्दा बढी सम्पर्क छन्, कृपया छनौट गर्नुहोस्।
+  - text: यहाँ धेरै सम्पर्कहरू छन्, तपाईले कुन उत्तम ठान्नुहुन्छ?
+  - text: कृपया चाहनुभएको सम्पर्क बताउनुहोस्, धेरै पत्ता लागेको छ।
+  - text: एकभन्दा बढी सम्बन्धित सम्पर्क फेला परेको छ, कुन चाहिन्छ भन्नुहोस्।
+  - text: एकभन्दा बढी विकल्पहरू छन्, तपाईंलाई कुन चाहनुहुन्छ?
+  - text: कृपया कुन सम्पर्कमा कल गर्न चाहनुहुन्छ स्पष्ट पार्नुहोस्।
+  - text: तपाईँले दिएको विवरणमा धेरै सम्पर्कहरू पाएका छु, कुन उपयुक्त छ?
+  - text: यस्तो अनेक सम्पर्कहरू छन्, कृपया चाहिने चुन्नुहोस्।
+  - text: यो नामसँग धेरै सम्पर्क जोडिएका छन्, कुन चाहनुहुन्छ?
+  - text: धेरै सम्पर्कहरू उपलब्ध छन्, कुनमा गर्न चाहनुहुन्छ?
+  - text: कृपया आफ्नो आवश्यकताको अनुसार उपयुक्त सम्पर्क छनौट गर्नुहोस्।
+  - text: यतिवटा सम्पर्क विवरणहरू देखापरेका छन्, कुन रोज्नुहुन्छ?
+  - text: धेरै वटा सम्पर्क मिलेको छ, कृपया स्पष्ट रुपमा बताउनुहोस्।
+  - text: धेरै वटा सम्पर्कहरू छन्, कुन आवश्यक छ बताउनुहोस्।
+  - text: तपाईंले खोज्नुभएको अनुसार विभिन्न सम्पर्कहरू छन्, कुन उपयुक्त छ?
+  - text: एउटै नामको धेरै सम्पर्क छन्, छनौट गर्नुस्।
+  - text: कृपया कुन सम्पर्क चाहनुहुन्छ भन्नुहोस्, धेरै भेटिएको छ।
+  - text: यस्तो अनेक सम्पर्कहरू छन्, तपाईँले कुन चाहनुहुन्छ?
+  - text: धेरैवटा सम्पर्क भेटिए, चयन गर्नुहोस्।
+  - text: धेरै नामहरु मिल्दो सम्पर्क भेटियो, कुन ठीक छ निश्चित पार्नुहोस्।
+  - text: यहाँ धेरै सम्पर्क विवरण छन्, चाहेको छनोट गर्नुहोस्।
+  - text: धेरै सम्पर्क फेला परे, कृपया स्पष्ट जानकारी दिनुहोस।
+  utter_make_call_name:
+  - text: म अब {receiver_name} लाई फोन गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: तपाईँको लागि {receiver_name} लाई कल गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई फोन गर्न थाल्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: अहिले {receiver_name} लाई कल गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} सँग कुरा गर्न फोन कल गर्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: म {receiver_name} लाई सम्पर्क गर्ने प्रयास गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई फोन सम्पर्क गर्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: अब {receiver_name} लाई कल गर्छु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} संग फोन कल सुरु गर्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: म {receiver_name} लाई कल लगाउँदैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: फोन गरें {receiver_name} लाई।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई कल गर्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: अब म {receiver_name} सँग कुरा गर्न फोन गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई फोन नम्बर कल गर्दैछु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: म {receiver_name} लाई कल प्रयास गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: फोन गरेर {receiver_name} लाई सम्पर्क गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई कल गर्न लाइनमा छु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: अब म {receiver_name} लाई सम्पर्क गर्न फोन गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई फोन लगाइरहेको छु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: म {receiver_name} लाई कल लगाउन थाल्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई फोन मिलाउन लागेको छु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: म {receiver_name} लाई तुरुन्त फोन गर्दैछु।
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: '{receiver_name} लाई कल गर्ने तयारीमा छु।'
+    custom:
+      receiver_name: '{receiver_name}'
+  - text: अहिले {receiver_name} लाई फोन गर्दैछु, कृपया पर्खनुहोस्।
+    custom:
+      receiver_name: '{receiver_name}'
+  utter_make_call_number:
+  - text: म अब {receiver_number} मा फोन गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: तपाईँको लागि {receiver_number} मा कल गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा फोन गर्न थाल्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: अहिले {receiver_number} मा कल गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} नम्बरमा फोन गर्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: म {receiver_number} मा सम्पर्क गर्ने प्रयास गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: कल गर्दैछु {receiver_number} मा।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: अब {receiver_number} मा कल गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा फोन वार्ता सुरु गर्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: म {receiver_number} मा कल लगाउँदैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: फोन गर्दैछु {receiver_number} मा।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा कल गर्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: अब म {receiver_number} मा कुरा गर्न फोन गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} नम्बरमा फोन नम्बर कल गर्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: म {receiver_number} मा बोलाउने प्रयास गर्न थालेको छु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: फोन गरेर {receiver_number} मा सम्पर्क गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा कल गर्न लाइनमा छु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: अब म {receiver_number} मा सम्पर्क गर्न फोन गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा फोन लगाइरहेको छु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: म {receiver_number} मा कल लगाउन थाल्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा फोन मिलाउन लागेको छु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: म {receiver_number} मा तुरुन्त फोन गर्दैछु।
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: '{receiver_number} मा कल गर्दैछु।'
+    custom:
+      receiver_number: '{receiver_number}'
+  - text: अहिले {receiver_number} मा फोन गर्दैछु, कृपया पर्खनुहोस्।
+    custom:
+      receiver_number: '{receiver_number}'
+  utter_ask_message_receiver_name:
+  - text: मलाई बताउनुहोस् कसलाई सन्देश पठाउने?
+  utter_ask_message_send_text:
+  - text: संदेश लेख्नुहोस्।
+  utter_message_receiver_name_deny:
+  - text: Process is cancelled.
+  utter_ask_receiver_name:
+  - text: Who do you want to send money to?
+    custom:
+      ui_type: input
+      action_type: receiver_name
+  utter_ask_account_number:
+  - text: What is the receiver's bank account number?
+    custom:
+      ui_type: input
+      action_type: ask_account_number
+  - text: What is the receiver's bank account number2?
+    custom:
+      ui_type: input2
+      action_type: ask_account_number2
+  utter_ask_amount:
+  - text: How much would you like to send?
+    custom:
+      ui_type: input
+      action_type: ask_amount
+  utter_ask_confirmation:
+  - text: You're sending {amount} to {receiver_name} at account number {account_number}. Should I proceed?
+    custom:
+      ui_type: input
+      action_type: ask_confirmation
+  utter_transaction_complete:
+  - text: ✅ Transaction complete. Money sent successfully.
+    custom:
+      ui_type: input
+      action_type: Transaction complete
+  utter_transaction_cancelled:
+  - text: ❌ Transaction cancelled.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_opening_app:
+  - text: Alright, opening {app_name} now.
+  - text: Launching {app_name} for you.
+  - text: Sure, starting {app_name}.
+  - text: Just a moment, I'm opening {app_name}.
+
+
+  utter_submit:
+  - text: Message is submitted
+  
+  utter_fallback:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

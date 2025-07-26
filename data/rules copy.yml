@@ -1,0 +1,88 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#     - intent: bot_challenge
+#     - action: utter_iamabot
+
+# - rule: respond to app open request
+#   steps:
+#     - intent: open_app
+#     - action: utter_opening_app
+
+# # money transaction related
+# - rule: Start money transfer
+#   steps:
+#     - intent: send_money
+#     - action: money_transfer_form
+#     - active_loop: money_transfer_form
+
+
+
+
+# - rule: Submit money transfer form
+#   condition:
+#     - active_loop: money_transfer_form
+#   steps:
+#     - action: money_transfer_form
+#     - active_loop: null
+#     - action: utter_ask_confirmation
+
+
+
+
+
+
+# - rule: Confirm transaction
+#   steps:
+#     - intent: affirm
+#     - action: utter_transaction_complete
+
+# - rule: Cancel transaction
+#   steps:
+#     - intent: deny
+#     - action: utter_transaction_cancelled
+
+
+# Rules for messaging intent
+- rule: message sending case
+  steps:
+    - intent: send_message
+    - action: message_send_form
+    - active_loop: message_send_form
+
+# - rule: Cancel message form on denial
+#   steps:
+#     - intent: deny
+#     - active_loop: message_send_form
+#     - action: action_deactivate_loop
+#     # - action: utter_cancel_message
+
+
+# Rules for calling intent
+- rule: no contact record case
+  steps:
+    - intent: no_contact_record_case
+    - action: utter_no_contact_record_case
+
+- rule: multiple contact record case
+  steps:
+    - intent: multiple_contact_record_case
+    - action: utter_multiple_contact_record_case
+
+- rule: making call name
+  steps:
+    - intent: make_call_name
+    - action: utter_make_call_name
+
+- rule: making call number
+  steps:
+    - intent: make_call_number
+    - action: utter_make_call_number

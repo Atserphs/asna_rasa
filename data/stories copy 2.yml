@@ -1,0 +1,82 @@
+# version: "3.1"
+
+# stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   # - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   # - intent: deny
+#   - action: utter_goodbye
+
+# - story: interactive_deny_receiver_name
+#   steps:
+#   - intent: send_message
+#   - action: message_send_form
+#   - active_loop: message_send_form
+#   - slot_was_set:
+#     - requested_slot: message_receiver_name
+#   - intent: deny
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - action: utter_message_receiver_name_deny
+
+
+
+
+# - story: 
+#   steps:
+#   - intent: request_restaurant
+#   - action: restaurant_form
+#   - active_loop: restaurant_form
+#   - slot_was_set:
+#     - requested_slot: num_people
+#   - intent: explain
+#   - action: utter_explain_num_people
+#   - action: restaurant_form
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: send_message
+#   - action: message_send_form
+#   - active_loop: message_send_form
+#   - slot_was_set:
+#     - requested_slot: message_receiver_name
+#   - intent: deny
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: utter_message_receiver_name_deny
+
+
+- story: deny during message form
+  steps:
+  - intent: send_message
+  - action: message_send_form
+  - active_loop: message_send_form
+  - slot_was_set:
+    - requested_slot: message_receiver_name
+  - intent: deny
+  - action: utter_message_receiver_name_deny
+  - active_loop: null

@@ -1,0 +1,321 @@
+utter_make_call:
+
+  # 25 responses with only receiver_name
+  - text: "म अब {receiver_name} लाई फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "तपाईँको लागि {receiver_name} लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई फोन गर्न थाल्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "अहिले {receiver_name} लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} सँग कुरा गर्न फोन कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "म {receiver_name} लाई सम्पर्क गर्ने प्रयास गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई फोन सम्पर्क गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "अब {receiver_name} लाई कल गर्छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} संग फोन कल सुरु गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "म {receiver_name} लाई कल लगाउँदैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "फोन गरें {receiver_name} लाई।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "अब म {receiver_name} सँग कुरा गर्न फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई फोन नम्बर कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "म {receiver_name} लाई कल प्रयास गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "फोन गरेर {receiver_name} लाई सम्पर्क गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई कल गर्न लाइनमा छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "अब म {receiver_name} लाई सम्पर्क गर्न फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई फोन लगाइरहेको छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "म {receiver_name} लाई कल लगाउन थाल्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई फोन मिलाउन लागेको छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "म {receiver_name} लाई तुरुन्त फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "{receiver_name} लाई कल गर्ने तयारीमा छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  - text: "अहिले {receiver_name} लाई फोन गर्दैछु, कृपया पर्खनुहोस्।"
+    custom:
+      receiver_name: "{receiver_name}"
+
+  # 25 responses with only receiver_number
+  - text: "म अब {receiver_number} मा फोन गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "तपाईँको लागि {receiver_number} मा कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा फोन गर्न थाल्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "अहिले {receiver_number} मा कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} नम्बरमा फोन गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_number} मा सम्पर्क गर्ने प्रयास गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "कल गर्दैछु {receiver_number} मा।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "अब {receiver_number} मा कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा फोन वार्ता सुरु गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_number} मा कल लगाउँदैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "फोन गर्दैछु {receiver_number} मा।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "अब म {receiver_number} मा कुरा गर्न फोन गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} नम्बरमा फोन नम्बर कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_number} मा बोलाउने प्रयास गर्न थालेको छु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "फोन गरेर {receiver_number} मा सम्पर्क गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा कल गर्न लाइनमा छु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "अब म {receiver_number} मा सम्पर्क गर्न फोन गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा फोन लगाइरहेको छु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_number} मा कल लगाउन थाल्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा फोन मिलाउन लागेको छु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_number} मा तुरुन्त फोन गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_number} मा कल गर्दैछु।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  - text: "अहिले {receiver_number} मा फोन गर्दैछु, कृपया पर्खनुहोस्।"
+    custom:
+      receiver_number: "{receiver_number}"
+
+  # 25 responses with both receiver_name and receiver_number
+  - text: "म अब {receiver_name} ({receiver_number}) लाई फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "तपाईँको लागि {receiver_name} ({receiver_number}) लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई फोन गर्न थाल्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "अहिले {receiver_name} ({receiver_number}) लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) सँग कुरा गर्न फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_name} ({receiver_number}) लाई सम्पर्क गर्ने प्रयास गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई फोन सम्पर्क गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "अब {receiver_name} ({receiver_number}) लाई कल गर्छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) संग फोन वार्ता सुरु गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_name} ({receiver_number}) लाई कल लगाउँदैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "फोन गरें {receiver_name} ({receiver_number}) लाई।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई कॉल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "अब म {receiver_name} ({receiver_number}) सँग कुरा गर्न फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई फोन नम्बर कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_name} ({receiver_number}) लाई बोलाउने प्रयास गर्न थालेको छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "फोन गरेर {receiver_name} ({receiver_number}) लाई सम्पर्क गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई कल गर्न लाइनमा छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई कल गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "अब म {receiver_name} ({receiver_number}) लाई सम्पर्क गर्न फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई फोन लगाइरहेको छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_name} ({receiver_number}) लाई कल लगाउन थाल्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई फोन मिलाउन लागेको छ।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "म {receiver_name} ({receiver_number}) लाई तुरुन्त फोन गर्दैछु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "{receiver_name} ({receiver_number}) लाई कल गर्ने तयारीमा छु।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"
+
+  - text: "अहिले {receiver_name} ({receiver_number}) लाई फोन गर्दैछु, कृपया पर्खनुहोस्।"
+    custom:
+      receiver_name: "{receiver_name}"
+      receiver_number: "{receiver_number}"

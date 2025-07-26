@@ -1,0 +1,474 @@
+version: "3.1"
+nlu:
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - stop
+- intent: send_message
+  examples: |
+    - म सन्देश पठाउन चाहन्छु
+    - म म्यासेज पठाउने हो
+    - म सन्देश दिन चाहन्छु
+    - म म्यासेज गर्नु छ
+    - म म्यासेज गर्न चाहन्छु
+    - म एउटा म्यासेज लेख्ने छु
+    - मलाई सन्देश पठाउनु छ
+    - म चाँडै म्यासेज पठाउने छु
+    - म सन्देश लेख्न चाहन्छु
+    - म म्यासेज लेख्ने कोसिस गर्दैछु
+    - मलाई अब सन्देश पठाउनु छ
+    - म सन्देश गर्न खोज्दैछु
+    - म म्यासेज लेख्न लागेको छु
+    - म अहिले म्यासेज पठाउने छु
+    - म तुरुन्तै सन्देश पठाउनेछु
+    - म चाहन्छु म्यासेज पठाउन
+    - मलाई सन्देश पठाउने इच्छा छ
+    - म सन्देश लेख्न मन पराउँछु
+    - म म्यासेज गर्ने योजना बनाउँदै छु
+    - म म्यासेज पठाउने सोचमा छु
+    - म सन्देश लेख्न सक्छु
+    - सन्देश पठाउनु छ
+    - म सन्देश तयार पार्दैछु
+    - म अहिले म्यासेज लेख्दैछु
+    - म चाहन्छु सन्देश लेख्न
+    - सन्देश पठाउने कुरा गर्दैछु
+    - म सन्देश टाइप गर्दैछु
+    - म्यासेज लेख्दैछु
+    - म सन्देश लेख्ने छु
+    - म सन्देश पठाउने अनुमति माग्दैछु
+    - म म्यासेज पठाउने प्रयास गर्दैछु
+    - मलाई सन्देश दिनु छ
+    - म मोबाइलबाट सन्देश पठाउन चाहन्छु
+    - म मेरो साथीलाई म्यासेज गर्न चाहन्छु
+    - मलाई सन्देश लेख्न मन लाग्यो
+    - म फोनबाट सन्देश पठाउने छु
+    - मलाई तुरुन्तै सन्देश लेख्नु छ
+    - म सोच्छु सन्देश पठाउन
+    - म चाहन्छु अब सन्देश लेख्न
+    - म आज सन्देश पठाउने छु
+    - म भोलि म्यासेज लेख्ने छु
+    - म हिजो पनि सन्देश पठाएको थिएँ
+    - सन्देश लेख्न चाहन्छु
+    - म चाहन्छु टाइप गर्न सन्देश
+    - मलाई अनुमति दिनु सन्देश पठाउन
+    - म टाइप गर्न चाहन्छु
+    - म आफ्नो साथीलाई सन्देश लेख्दैछु
+    - म सन्देश पठाउने तयारीमा छु
+    - म मोबाइलमा म्यासेज लेख्दैछु
+    - म चैट गर्न चाहन्छु
+    - म [Ramesh](message_receiver_name) सन्देश पठाउन चाहन्छु
+    - [Sushil](message_receiver_name) म्यासेज गर
+    - [Anita](message_receiver_name) लाई म्यासेज पठा
+    - म [Deepak](message_receiver_name) सन्देश पठाउने छु
+    - [Sabina](message_receiver_name) लाई सन्देश लेख
+    - मलाई [Raju](message_receiver_name) लाई म्यासेज गर्नु छ
+    - [Maya](message_receiver_name) लाई सन्देश गर
+    - [Sunita](message_receiver_name) लाई म्यासेज पठा
+    - म [रमेशलाई](message_receiver_name) सन्देश पठाउन चाहन्छु
+    - [सुशीललाई](message_receiver_name) म्यासेज गर
+    - [अनिता](message_receiver_name) लाई म्यासेज पठा
+    - म [दिपकलाई](message_receiver_name) सन्देश पठाउने छु
+    - [सविना](message_receiver_name) लाई सन्देश लेख
+    - मलाई [राजु](message_receiver_name) लाई म्यासेज गर्नु छ
+    - [माया](message_receiver_name) लाई सन्देश गर
+    - [सुनिता](message_receiver_name) लाई म्यासेज पठा
+    - [किरणलाई](message_receiver_name) म सन्देश पठाउने छु
+    - म [साजनलाई](message_receiver_name) म्यासेज लेख्न चाहन्छु
+    - म [कृष्णालाई](message_receiver_name) म्यासेज गर्दैछु
+    - [तारा](message_receiver_name) लाई सन्देश लेख
+    - [दीपा](message_receiver_name) लाई म्यासेज गर
+    - म चाहन्छु [सन्देशलाई](message_receiver_name) सन्देश लेख्न
+    - [भानु](message_receiver_name) लाई म्यासेज पठाउने छु
+    - [जगदीश](message_receiver_name) लाई म्यासेज पठाउनु पर्छ
+    - म [रवि](message_receiver_name) लाई सन्देश लेख्दैछु
+    - म [सानु](message_receiver_name) लाई म्यासेज गरिरहेको छु
+    - [हेम](message_receiver_name) लाई म्यासेज पठाउन सकिन्छ
+    - [निशा](message_receiver_name) लाई सन्देश गरिदेउ
+    - [प्रेम](message_receiver_name) लाई म्यासेज गर
+    - [दिपा](message_receiver_name) लाई सन्देश लेख
+    - म [रेशमलाई](message_receiver_name) सन्देश पठाउने छु
+    - [गणेश](message_receiver_name) लाई म्यासेज गर
+    - म [मिलनलाई](message_receiver_name) म्यासेज लेख्न चाहन्छु
+    - [लक्ष्मी](message_receiver_name) लाई सन्देश लेख्न चाहन्छु
+    - [हरि](message_receiver_name) लाई म्यासेज गर
+    - म [सरस्वतीलाई](message_receiver_name) म्यासेज पठाउने छु
+    - [कपिललाई](message_receiver_name) म सन्देश पठाउने छु
+    - [सञ्जयलाई](message_receiver_name) म्यासेज गर
+    - म [देविका](message_receiver_name) लाई सन्देश लेख्न चाहन्छु
+    - [दिवसलाई](message_receiver_name) म म्यासेज गर्दैछु
+    - [सुनिललाई](message_receiver_name) म्यासेज पठा
+    - म [गोपाल](message_receiver_name) लाई म्यासेज लेख्न चाहन्छु
+    - [पारस](message_receiver_name) लाई म्यासेज गर
+    - म [कृष्णा](message_receiver_name) लाई सन्देश लेख्ने छु
+    - म [शिव](message_receiver_name) लाई म्यासेज गर्न चाहन्छु
+    - [नारायणलाई](message_receiver_name) म सन्देश पठाउने छु
+    - [रिता](message_receiver_name) लाई म्यासेज लेख
+    - [ललिता](message_receiver_name) लाई म सन्देश लेख्ने छु
+    - म [शारदा](message_receiver_name) लाई सन्देश लेख्न चाहन्छु
+    - [भुवन](message_receiver_name) लाई म्यासेज पठाउनुछ
+    - म [शशिकला](message_receiver_name) लाई म्यासेज पठाउन चाहन्छु
+    - [विनय](message_receiver_name) लाई म सन्देश लेख्ने छु
+    - म [प्रकाशलाई](message_receiver_name) म्यासेज गर
+    - [शम्भु](message_receiver_name) लाई म्यासेज पठा
+    - म [अर्जुनलाई](message_receiver_name) सन्देश पठाउने छु
+    - [मनोजलाई](message_receiver_name) म म्यासेज पठाउने छु
+    - म [निशालाई](message_receiver_name) म्यासेज लेख्दैछु
+    - म [समिरलाई](message_receiver_name) सन्देश पठाउने सोचमा छु
+
+    
+    - म [रमेशलाई](message_receiver_name) सन्देश पठाउन चाहन्छु कि [म घर ढिलो आउनेछु](message_send_text)
+    - [अनिता](message_receiver_name) लाई भनिदेउ [म अफिसमा व्यस्त छु](message_send_text)
+    - म [सविना](message_receiver_name) लाई पठाउन चाहन्छु [म अहिले अफिसमा छु](message_send_text)
+    - [किरणलाई](message_receiver_name) म म्यासेज पठाउँछु [म पछि फोन गर्छु](message_send_text)
+    - [साजनलाई](message_receiver_name) पठा [म अस्पताल गइरहेको छु](message_send_text)
+    - [सुनिता](message_receiver_name) लाई लेख [म घरमै छु](message_send_text)
+    - म [दिपकलाई](message_receiver_name) म्यासेज पठाउने छु [भोलि भेटौंला](message_send_text)
+    - [तारा](message_receiver_name) लाई म लेख्दैछु [कक्षा सुरु भइसक्यो](message_send_text)
+    - म [प्रेमलाई](message_receiver_name) पठाउने छु [काम सकियो](message_send_text)
+    - म [निशालाई](message_receiver_name) लेख्न चाहन्छु [भोलिको तयारी गर](message_send_text)
+    - [गोपाललाई](message_receiver_name) पठा [साझँ ५ बजे भेटौंला](message_send_text)
+    - म [कपिललाई](message_receiver_name) पठाउने छु [आज म व्यस्त छु](message_send_text)
+    - म [हरिलाई](message_receiver_name) लेख्दैछु [बिहान १० बजे उठाउनु](message_send_text)
+    - म [ललितालाई](message_receiver_name) सन्देश गरिरहेको छु [म आज घर आउँदिन](message_send_text)
+    - [रेशमलाई](message_receiver_name) भनिदेउ [खाना खाइसकेको छु](message_send_text)
+    - [सन्देशलाई](message_receiver_name) पठा [तिमीलाई सम्झिरहेको छु](message_send_text)
+    - [प्रकाशलाई](message_receiver_name) लेख [कृपया मलाई माफ गर](message_send_text)
+    - म [सागरलाई](message_receiver_name) पठाउने छु [म रेल चढ्दैछु](message_send_text)
+    - म [सन्तोषलाई](message_receiver_name) पठाउन चाहन्छु [फोन चार्ज छैन](message_send_text)
+    - [रवि](message_receiver_name) लाई पठा [म पछि फर्कन्छु](message_send_text)
+    - म [सुनिललाई](message_receiver_name) लेख [सबै ठिक छ](message_send_text)
+    - म [श्रीकृष्णलाई](message_receiver_name) सन्देश लेख्दैछु [तिमी कहाँ छौ?](message_send_text)
+    - म [दिवसलाई](message_receiver_name) लेख्दैछु [आज हाजिर छैन](message_send_text)
+    - [हेमलाई](message_receiver_name) पठा [मलाई मद्दत चाहियो](message_send_text)
+    - [रमिलालाई](message_receiver_name) लेख [के आज भेट्न मिल्छ?](message_send_text)
+    - म [अर्जुनलाई](message_receiver_name) पठाउने छु [बाहिर गइरहेको छु](message_send_text)
+    - म [सुष्मालाई](message_receiver_name) लेख्दैछु [तपाईंको सन्देश पाएको छु](message_send_text)
+    - [लक्ष्मीलाई](message_receiver_name) पठा [काम सकिन बाँकी छ](message_send_text)
+    - म [भानुलाई](message_receiver_name) पठाउने छु [कृपया ढोका खोलिदेउ](message_send_text)
+    - म [दिपालाई](message_receiver_name) पठाउन चाहन्छु [म अलिक ढिलो हुन्छु](message_send_text)
+    - म [मनोजलाई](message_receiver_name) लेख [फोन गर मलाई](message_send_text)
+    - म सनदश पठउन चहनछ
+- intent: no_contact_record_case
+  examples: |
+    - no_contact_record_case
+- intent: multiple_contact_record_case
+  examples: |
+    - multiple_contact_records
+- intent: make_call_name
+  examples: |
+    - [राम](receiver_name) लाई फोन गर
+    - [सरिता](receiver_name) लाई कल गरिदिनुस्
+    - मलाई [श्रवण](receiver_name) सँग कुरा गर्न छ
+    - [ममी](receiver_name) लाई कल गर
+    - [श्रीमती](receiver_name) लाई फोन गर्नुहोस्
+    - [बाबु](receiver_name) सँग सम्पर्क गर
+    - [प्रकाश](receiver_name) लाई मोबाइलमा कल गर
+    - [सन्देश](receiver_name) लाई कल गरेर कुरा गरिदेउ
+    - कृपया [पुरुषोत्तम](receiver_name) लाई कल गर्नुहोस्
+    - [सन्ध्या](receiver_name) लाई सम्पर्क गरिदिनुस्
+    - [रामु](receiver_name) लाई एकचोटि फोन गर
+    - [समीर](receiver_name) लाई कल गरिदेउ
+    - [संगीता](receiver_name) लाई कल लगाइदेउ
+    - [नानी](receiver_name) लाई फोन गरिदेऊ
+    - मेरो [दाई](receiver_name) लाई फोन गरिदेऊ
+    - [दिदी](receiver_name) लाई कल गर
+    - [साथी](receiver_name) लाई कल गरिदेउ
+    - मलाई [तपाईं](receiver_name) लाई फोन गर्न मन छ
+    - [श्रीमान्](receiver_name) लाई कल गर
+    - [छोरा](receiver_name) सँग कुरा गरिदेऊ
+    - [काका](receiver_name) लाई फोन लागाइदेऊ
+    - [गुरु](receiver_name) लाई सम्पर्क गर
+    - [अनु](receiver_name) लाई अहिल्यै कल गर
+    - [अंकल](receiver_name) लाई फोनमा सम्पर्क गर
+    - [रजनी](receiver_name) लाई एकचोटि कल गर
+    - [बिन्दु](receiver_name) लाई फोन गरिदेउ
+    - [आमा](receiver_name) लाई कल लगाइदिनुहोस्
+    - [बाबा](receiver_name) लाई सम्पर्क गर
+    - [शशि](receiver_name) लाई कल गरिदिनुहोस्
+    - [गोपाल](receiver_name) लाई फोनमा सम्पर्क गर
+    - [मेरो श्रीमती](receiver_name) लाई कल गरिदेउ
+    - [शुभम](receiver_name) लाई फोन गर
+    - [प्रियंका](receiver_name), लाई कल गर्नेछन्?
+    - [मानिस](receiver_name) लाई अहिल्यै फोन गर
+    - [सारिका](receiver_name) लाई सम्पर्क गरिदिनुस्
+    - [मेरो बहिनी](receiver_name) लाई कल गरिदेऊ
+    - [प्रमिला](receiver_name) लाई फोन गरिदिन सक्छौ?
+    - मलाई [संगीता](receiver_name) लाई कल गरिदेऊ
+    - [नरेश](receiver_name) लाई कल गर
+    - [शिशिर](receiver_name) लाई अब कल गर्नुहोस्
+    - [पर्सनल नम्बर](receiver_name) मा सम्पर्क गर
+    - [बिमला](receiver_name) लाई फोन गर्नु होस्
+    - [राजु](receiver_name) लाई कल गरिदिन सक्छ्यौ?
+    - [बुद्धि](receiver_name) लाई मोबाइलमा फोन लगाइदेउ
+    - [कामिनी](receiver_name) लाई कल गर
+    - [सुस्मा](receiver_name) लाई अहिल्यै सम्पर्क गर
+    - [अप्सरा](receiver_name) लाई कल गरिदेऊ
+    - [सुजन](receiver_name) लाई फोन गरेर कुरा गरिदेऊ
+    - [माया](receiver_name) लाई कल गर्नुहोस्
+    - [सन्तोष](receiver_name) लाई कल गरिदिनु
+    - [राम](receiver_name) लाई समिक्षा गर
+    - के [दिपशिखा](receiver_name) लाई फोन गर्न सक्नुहुन्छ?
+    - [उत्सव](receiver_name) लाई तुरुन्त सम्पर्क गर्नुहोस्
+    - [निशा](receiver_name) लाई अहिल्यै फोन गरिदेऊ
+    - [ड्याडी](receiver_name) लाई फोन गरिदेऊ
+    - [मेरो अंकल](receiver_name) लाई कॉल गर्नुहोस्
+    - [मित्र](receiver_name) लाई कल गर
+    - [आर्यन](receiver_name) लाई कल गरिदेउ
+    - [पुष्पा](receiver_name) लाई सम्पर्क गर
+    - [सुरज](receiver_name) लाई फोनमा संपर्क गर्नुहोस्
+    - [साजन](receiver_name) लाई मोबाइलमा कल गर
+    - [राहुल](receiver_name) लाई अहिल्यै फोन गर्नुहोस्
+    - [शिव](receiver_name) लाई सम्पर्क गरिदेऊ
+    - [पूनम](receiver_name) लाई कल गर
+    - [भानु](receiver_name) लाई फोनमा कल गर
+    - [ज्ञानु](receiver_name) लाई संपर्क गर
+    - [प्रिय](receiver_name) लाई कल गरिदेउ
+    - [हरि](receiver_name) लाई फोनमा सम्पर्क गर्नुहोस्
+    - [सरोज](receiver_name) लाई कल सुरु गर
+    - [तिलोत्तमा](receiver_name) लाई सम्पर्क गरिदेउ
+    - [राजन](receiver_name) लाई फोन गर्नुहोस्
+    - [मित्र](receiver_name) लाई एकपटक फोन गरिदेउ
+    - [इन्द्र](receiver_name) लाई तुरुन्त सम्पर्क गर
+    - [१६९०८४०४६१](receiver_name) मा फोन गर दिदिन
+    - [बिबेक](receiver_name) लाई फोन गरिदिन सक्नुहुन्छ?
+    - [अर्पण](receiver_name) लाई कल गर
+    - [बहिनी](receiver_name) लाई अहिल्यै फोन गर
+    - [मायालु](receiver_name) लाई कॉल गर
+    - [सञ्चार](receiver_name) सँग कुरा गरिदेऊ
+    - [छोरी](receiver_name) लाई कल गर
+    - [सञ्चिता](receiver_name) लाई मोबाइलमा सम्पर्क गर
+    - [जोन](receiver_name) लाई कल गर्नुहोस्
+    - [मन्त्री](receiver_name) लाई फोन लागाइदेउ
+    - [पवन](receiver_name) लाई कल गरिदिनुहोस्
+    - [आमो](receiver_name) लाई सम्पर्क गर
+    - के [मनिषा](receiver_name) लाई कल गर्न सक्नुहुन्छ?
+    - [पिताजी](receiver_name) लाई अहिल्यै कल गर्नुहोस्
+    - मलाई [स्मृति](receiver_name) लाई फोन गर्नु छ
+    - [रिना](receiver_name) लाई मोबाइलमा सम्पर्क गर्नुहोस्
+    - [गोविन्द](receiver_name) लाई महत्त्वपूर्ण कुरा छ, फोन गरिदेऊ
+    - [रश्मि](receiver_name) लाई तुरुन्त फोन गर्नुहोस्
+    - [जय](receiver_name) लाई कल गर
+    - [ललिता](receiver_name) लाई सम्पर्क गर्नुहोस्
+    - [हरिस](receiver_name) लाई तुरुन्त फोन गर
+    - [रेखा](receiver_name) लाई सम्पर्क गरिदिनु
+    - [पुजन](receiver_name) लाई कल गर्नु होस्
+    - [मती](receiver_name) लाई कल गर्न चाहन्छु
+    - [सुर्या](receiver_name) लाई अहिल्यै फोन गरिदेऊ
+    - [अजित](receiver_name) लाई कल गर्नुहोस्
+    - [गगन](receiver_name) लाई सम्पर्क गरिदेउ
+    - [प्यासा](receiver_name) को नम्बरमा कल गर
+    - [गार्गी](receiver_name) लाई सम्पर्क गरिदेउ
+    - कृपया [राम](receiver_name) लाई कल गर्न सक्नुहुन्छ?
+    - [आमा](receiver_name) लाई फोन गर्न मन छ
+    - म [प्रकाश](receiver_name) सँग कुरा गर्न चाहन्छु
+    - के [सन्देश](receiver_name) को नम्बरमा फोन मिल्छ?
+    - [९८०१२३४५६७८](receiver_name) मा फोन गर
+    - मलाई [श्रीमान्](receiver_name)लाई फोन गरिदिनुहोस्
+    - म फोन गर्न चाहन्छु [संगीता](receiver_name) लाई
+    - [बहिनी](receiver_name) लाई फोन गरेर कुरा गरिदिनुहोस्
+    - [आमा](receiver_name) लाई तुरुन्त फोन गरौं?
+    - [पिता](receiver_name) लाई म यसबेला फोन गर्न चहान्छु
+    - मेरो साथीलाई कल गरेर कुरा गरिदिनुहोस्
+    - किन [प्रिया](receiver_name) लाई फोन गरिरहेको छैन?
+    - म चाहन्छु तपाईं [बाबु](receiver_name) लाई फोन गरिदिनुहोस्
+    - जसलाई म अन्तिम पटक फोन गरेको थिए, उनलाई फोन गर
+    - [शुभम](receiver_name) लाई भेट्नका लागि फोन गर
+    - म घरमा छु, कृपया [रामु](receiver_name) लाई फोन लगा
+    - फोन गरेर [राम](receiver_name)सँग कुरा गरौं?
+    - [साथीहरू](receiver_name) लाई एकैचोटि कल गर
+    - अस्ना, [राम](receiver_name) लाई फोन गर
+    - अस्ना, मलाई [सीता](receiver_name) लाई कल लगाइदेऊ
+    - अस्ना, के [सुरेश](receiver_name) लाई फोन गर्न सकिन्छ?
+    - अस्ना, कृपया [प्रकाश](receiver_name) लाई भोलि फोन गर
+    - अस्ना, अहिले [गोपाल](receiver_name) सँग कुरा गर
+    - अस्ना, [आमा](receiver_name) लाई कल गरिदेऊ
+    - अस्ना, [राजेश](receiver_name) लाई मोबाइलबाट कल लगाइदेऊ
+    - अस्ना, मलाई [शान्ता](receiver_name) लाई फोन गर्नु छ
+    - अस्ना, तुरुन्त [दिदी](receiver_name) लाई फोन गरिदिनुस्
+    - अस्ना, [संगीता](receiver_name) लाई तुरुन्त सम्पर्क गर
+    - अस्ना, मेरो लागि [बाबु](receiver_name) लाई कल गरिदेउ
+    - अस्ना, आज [हरी](receiver_name) लाई फोन गर
+    - अस्ना, के म [रमेश](receiver_name) लाई कल गर्न सक्छु?
+    - अस्ना, मलाई [माया](receiver_name) लाई कल लगाइदेऊ
+    - अस्ना, अहिल्यै [सुनिता](receiver_name)लाई फोन गर
+    - अस्ना, [सरोकार](receiver_name) लाई फोन गरेर कुरा गरिदिनु
+    - अस्ना, मलाई फोन लगाइदेऊ [राजु](receiver_name) लाई
+    - अस्ना, [कमला](receiver_name) लाई कल गरिदिन सक्छौ?
+    - अस्ना, कृपया [दीपक](receiver_name) लाई कल गर्दा पनि मलाई सुन्ने गरिदिनु
+    - अस्ना, मलाई [श्री](receiver_name)लाई फोन लगाइदेऊ अहिले
+    - अस्ना, [प्रेम](receiver_name) लाई कल गरिदिनु है हैत्रे
+    - अस्ना, [नीरज](receiver_name) लाई कल गरिदिन्छस् भन्ने हुन्छ?
+    - अस्ना, म [अनिल](receiver_name) लाई फोन गर्न चाहन्छु
+    - अस्ना, मलाई [राधा](receiver_name) लाई कल लगाइदिन सकिन्छ?
+    - अस्ना, [पिताजी](receiver_name) लाई फोन गरिदिनू है
+    - अस्ना, तुरुन्तै [सन्तोष](receiver_name) सँग कुरा गरिदेऊ
+    - अस्ना, के मलाई [राजन](receiver_name) लाइ कल गर्न मिल्छ?
+    - अस्ना, मलाई [शुभम](receiver_name) लाई कल लगाइदिनुस्
+    - अस्ना, म [गंगा](receiver_name) लाई फोन गर्न चाहन्छु
+    - अस्ना, [आमा](receiver_name) लाई कल गरिदिन्छस्?
+    - अस्ना, [संध्या](receiver_name) लाई कल गरिदिन सक्छौ?
+    - अस्ना, मलाई फोन गर [सुरज](receiver_name) लाई
+    - अस्ना, [रामु](receiver_name) लाई तुरुन्त फोन लगाइदेऊ
+    - अस्ना, मलाई [पुष्पा](receiver_name) लाई कल गर्न मन छ
+    - अस्ना, मलाई फोन गरिदिनुस् [शिव](receiver_name) लाई
+    - अस्ना, मलाई फोन गर [रवि](receiver_name)लाई
+    - अस्ना, [लक्ष्मी](receiver_name) लाई कल गरिदिनु है
+    - अस्ना, [कूल](receiver_name) लाई कुनै बेला फोन लगाइदेऊ
+    - अस्ना, [दीपा](receiver_name)लाई कल गर्नुस् न
+    - अस्ना, मलाई तुरुन्त [राजेश](receiver_name) लाई फोन गरिदेऊ
+    - अस्ना, [सुजाता](receiver_name) सँग कुरा गरिदिनु
+    - अस्ना, मलाई फोन गरिदिन्छस् [मोनिका](receiver_name) लाई
+    - अस्ना, [भानु](receiver_name) लाई कल गरिदेऊ
+    - अस्ना, मलाई [सुमन](receiver_name) लाई बोलाउनुछ
+    - अस्ना, [गोपाल](receiver_name) लाई फोन लगाइदिन सक्छौ?
+    - अस्ना, मलाई फोन गर [राम](receiver_name) लाई अब
+    - अस्ना, मेरो लागि [मिना](receiver_name) लाई कल गर
+    - अस्ना, मलाई कल गर्नुहोस् [उमा](receiver_name) लाई
+    - अस्ना, म [कुमार](receiver_name) लाई कल गर्न चाहन्छु
+    - अस्ना, के मैले [रश्मि](receiver_name) लाई फोन गर्न सक्छु?
+    - अस्ना, आज [शशि](receiver_name) लाई फोन गरिदिनुहोस्
+    - अस्ना, मलाई फोन लगाइदिनुहोस् [अर्पण](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदेऊ [सुशील](receiver_name) लाई
+    - अस्ना, मलाई कल गर्नुहोस् [कमला](receiver_name) लाई
+    - अस्ना, [निशा](receiver_name) लाई कृपया कल गरिदिनुहोस्
+    - अस्ना, मलाई [विद्या](receiver_name) लाई कल गरिदिन्छु
+    - अस्ना, [सुनिता](receiver_name)लाई फोन गरिदिनु होला
+    - अस्ना, मलाई कल गर्ने होस् [शंकर](receiver_name) लाई
+    - अस्ना, मलाई तुरुन्त [विष्णु](receiver_name) लाई फोन गरिदिनुस्
+    - अस्ना, मलाई कल गरिदिनुहोस् [प्रकाश](receiver_name) लाई
+    - अस्ना, मलाई फोन लगाइदेऊ [ड़ीना](receiver_name) लाई
+    - अस्ना, मलाई [मनोज](receiver_name) लाई फोन गर्न मन छ
+    - अस्ना, मलाई फोन गरिदिनु होला [शिवप्रसाद](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदिनुहोस् [कल्याणी](receiver_name) लाई
+    - अस्ना, म [सागर](receiver_name) लाई कल गर्न चाहन्छु
+    - अस्ना, मलाई फोन लगाइदेऊ [रजनी](receiver_name) लाई
+    - अस्ना, मलाई तुरुन्त [अनिल](receiver_name) लाई कल गरिदिनुहोस्
+    - अस्ना, मलाई कल गर्न सहयोग गर [निशा](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदिनु होला [शान्ति](receiver_name) लाई
+    - अस्ना, मलाई [सुचित्रा](receiver_name) लाई फोन गर्न मद्दत गर
+    - अस्ना, मलाई कल गर [राजेश्वर](receiver_name) लाई
+    - अस्ना, मलाई तुरुन्त कल गर्न मन छ [देवकिशोर](receiver_name) लाई
+    - अस्ना, मलाई फोन लगाइदेऊ [तुलसी](receiver_name) लाई
+    - अस्ना, मलाई कल गर्न मन छ [प्रियंका](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदिनोस् [निरु](receiver_name) लाई
+    - अस्ना, मलाई कल गर [कृष्ण](receiver_name) लाई
+    - अस्ना, मलाई तुरुन्त कल गर्न मन छ [जीवन](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदिनुहोस् [सुमित्रा](receiver_name) लाई
+    - अस्ना, मलाई फोन गर्ने होस् [कनक](receiver_name) लाई
+    - अस्ना, मलाई कल गरिदिनुहोस् [विनोद](receiver_name) लाई
+- intent: make_call_number
+  examples: |
+    - यो नम्बरमा कल गर: [९८४१२३४५६७](receiver_number)
+    - मलाई यो नम्बरमा फोन लगाइदेऊ: [९८५६७८९०१२](receiver_number)
+    - कृपया [९८४५६७८९०१](receiver_number) मा तुरुन्त फोन गर
+    - के म [९८४१२३४५६७](receiver_number) मा कल गर्न सक्छु?
+    - [९८५४३२१०९८](receiver_number) मा तुरुन्त फोन लगाइदिनुस्
+    - मलाई [९८४३२१०९८७](receiver_number) मा कल गरिदिनुहोस्
+    - त्यो नम्बर [९८४९८७६५४३](receiver_number) मा फोन गरिदेऊ न
+    - तुरुन्त [९८४७६५४३२१](receiver_number) मा फोन लगाइदेऊ
+    - के मलाई [९८४१२३४५६७](receiver_number) मा तुरुन्त कल गर्न सकिन्छ?
+    - कसैको नम्बर [९८५१२३४५६७](receiver_number) मा कल गर्न मन छ
+    - म [९८४५६७८९०१](receiver_number) मा फोन गर्न चाहन्छु
+    - के तपाईँ मलाई [९८४१२३४५६७](receiver_number) मा कल गर्न सहयोग गर्नुहुन्छ?
+    - मलाई [९८४९८९८७६५](receiver_number) मा कल लगाइदिन सक्नुहुन्छ?
+    - तुरुन्त [९८५०१२३४५६](receiver_number) मा फोन लगाइदिन्छस्?
+    - मैले [९८४८७६५४३२](receiver_number) मा फोन गर्नु छ
+    - कृपया [९८४१२३४५६७](receiver_number) मा फोन लगाइदिनुहोस्
+    - त्यो नम्बरमा [९८५६७८९०१२](receiver_number) कल गरिदिनु होला
+    - [९८४१२३४५६७](receiver_number) मा फोन गरिदिनु हुन्छ है?
+    - मलाई [९८५४३२१०९८](receiver_number) मा फोन लगाउन आवश्यक छ
+    - के म [९८४१२३४५६७](receiver_number) मा कल गर्न सक्छु न?
+    - [९८४३२१०९८७](receiver_number) मा तुरुन्तै फोन गरिदेऊ न
+    - मलाई [९८४५६७८९०१](receiver_number) मा तुरुन्त फोन गरिदिनुस्
+    - म [९८४९८७६५४३](receiver_number) मा फोन गर्न चाहन्छु
+    - कृपया मलाई [९८४७६५४३२१](receiver_number) मा कल गरिदिने अधिकार दिनुस्
+    - तुरुन्तै [९८४१२३४५६७](receiver_number) मा कल लगाइदेऊ
+    - मलाई सहयोग गर, [९८५१२३४५६७](receiver_number) मा फोन गर्नुछ
+    - के तपाईं [९८४५६७८९०१](receiver_number) मा कलमा मद्दत गर्न सक्नुहुन्छ?
+    - मेरो लागि तुरुन्त [९८४१२३४५६७](receiver_number) मा फोन लगाइदिन सक्नुहुन्छ?
+    - यस नम्बरमा [९८४९८९८७६५](receiver_number) आजै कल गर्नुहोस्
+    - मलाई [९८५०१२३४५६](receiver_number) मा कल गरिदिएर खबर दिनुहोस्
+    - के तपाईं मलाई [९८४८७६५४३२](receiver_number) मा कल लगाउन मद्दत गर्नुहुन्छ?
+    - मलाई फोन गरिदिनुहोस्, [९८४१२३४५६७](receiver_number) मा तुरुन्त आवश्यक छ
+    - म [९८५६७८९०१२](receiver_number) मा फोन गर्नेछु
+    - कृपया [९८४१२३४५६७](receiver_number) मा कल लगाइदिनु
+    - मलाई फोन लगाइदिनुहोस् [९८५४३२१०९८](receiver_number), महत्वपूर्ण कुरा छ
+    - मलाई तुरुन्त [९८४३२१०९८७](receiver_number) मा कल लगाइदिनुहोस्
+    - मलाई [९८४५६७८९०१](receiver_number) मा कल गर्न मन छ
+    - के तुरुन्त मलाई [९८४९८७६५४३](receiver_number) मा फोन गरिदिन होला?
+    - मलाई फोन लगाइदिनुस् [९८४७६५४३२१](receiver_number)
+    - उसलाई [९८४१२३४५६७](receiver_number) मा कल गरिदिनुहोस्
+    - मलाई [९८५१२३४५६७](receiver_number) मा फोन गरिदिनुस् न
+    - कृपया आजै [९८४५६७८९०१](receiver_number) मा कल गरिदिनुहोस्
+    - म [९८४१२३४५६७](receiver_number) मा फोन गर्न चाहन्छु
+    - फोन लगाइदिनुस् मलाई [९८५४३२१०९८](receiver_number) मा, जरूरी छ
+    - मलाई कल गर्नुहोस् [९८४३२१०९८७](receiver_number) मा आज
+    - म तुरुन्त [९८४५६७८९०१](receiver_number) मा फोन गर्नेछु
+    - के मलाई [९८४९८७६५४३](receiver_number) मा फोन लगाइदिन सकिन्छ?
+    - [९८४७६५४३२१](receiver_number) मा तुरुन्त फोन लगाइदिनुहोस्
+    - मैले बताएको नम्बर [९८४१२३४५६७](receiver_number) मा कल गरिदिनुस्
+    - [९८०९०९००००](receiver_number) लाई कल गर्नुस् न
+    - यो नम्बरमा कल गर: [9841234567](receiver_number)
+    - मलाई यो नम्बरमा फोन लगाइदेऊ: [9856789012](receiver_number)
+    - कृपया [9845678901](receiver_number) मा तुरुन्त फोन गर
+    - के म [9841234567](receiver_number) मा कल गर्न सक्छु?
+    - [9854321098](receiver_number) मा तुरुन्त फोन लगाइदिनुस्
+    - मलाई [9843210987](receiver_number) मा कल गरिदिनुहोस्
+    - त्यो नम्बर [9849876543](receiver_number) मा फोन गरिदेऊ न
+    - तुरुन्त [9847654321](receiver_number) मा फोन लगाइदेऊ
+    - के मलाई [9841234567](receiver_number) मा तुरुन्त कल गर्न सकिन्छ?
+    - कसैको नम्बर [9851234567](receiver_number) मा कल गर्न मन छ
+    - म [9845678901](receiver_number) मा फोन गर्न चाहन्छु
+    - के तपाईँ मलाई [9841234567](receiver_number) मा कल गर्न सहयोग गर्नुहुन्छ?
+    - मलाई [9849898765](receiver_number) मा कल लगाइदिन सक्नुहुन्छ?
+    - तुरुन्त [9850123456](receiver_number) मा फोन लगाइदिन्छस्?
+    - मैले [9848765432](receiver_number) मा फोन गर्नु छ
+    - कृपया [9841234567](receiver_number) मा फोन लगाइदिनुहोस्
+    - त्यो नम्बरमा [9856789012](receiver_number) कल गरिदिनु होला
+    - [9841234567](receiver_number) मा फोन गरिदिनु हुन्छ है?
+    - मलाई [9854321098](receiver_number) मा फोन लगाउन आवश्यक छ
+    - के म [9841234567](receiver_number) मा कल गर्न सक्छु न?
+    - [9843210987](receiver_number) मा तुरुन्तै फोन गरिदेऊ न
+    - मलाई [9845678901](receiver_number) मा तुरुन्त फोन गरिदिनुस्
+    - म [9849876543](receiver_number) मा फोन गर्न चाहन्छु
+    - कृपया मलाई [9847654321](receiver_number) मा कल गरिदिने अधिकार दिनुस्
+    - तुरुन्तै [9841234567](receiver_number) मा कल लगाइदेऊ
+    - मलाई सहयोग गर, [9851234567](receiver_number) मा फोन गर्नुछ
+    - के तपाईं [9845678901](receiver_number) मा कलमा मद्दत गर्न सक्नुहुन्छ?
+    - मेरो लागि तुरुन्त [9841234567](receiver_number) मा फोन लगाइदिन सक्नुहुन्छ?
+    - यस नम्बरमा [9849898765](receiver_number) आजै कल गर्नुहोस्
+    - मलाई [9850123456](receiver_number) मा कल गरिदिएर खबर दिनुहोस्
+    - के तपाईं मलाई [9848765432](receiver_number) मा कल लगाउन मद्दत गर्नुहुन्छ?
+    - मलाई फोन गरिदिनुहोस्, [9841234567](receiver_number) मा तुरुन्त आवश्यक छ
+    - म [9856789012](receiver_number) मा फोन गर्नेछु
+    - कृपया [9841234567](receiver_number) मा कल लगाइदिनु
+    - मलाई फोन लगाइदिनुहोस् [9854321098](receiver_number), महत्वपूर्ण कुरा छ
+    - मलाई तुरुन्त [9843210987](receiver_number) मा कल लगाइदिनुहोस्
+    - मलाई [9845678901](receiver_number) मा कल गर्न मन छ
+    - के तुरुन्त मलाई [9849876543](receiver_number) मा फोन गरिदिन होला?
+    - मलाई फोन लगाइदिनुस् [9847654321](receiver_number)
+    - उसलाई [9841234567](receiver_number) मा कल गरिदिनुहोस्
+    - मलाई [9851234567](receiver_number) मा फोन गरिदिनुस् न
+    - कृपया आजै [9845678901](receiver_number) मा कल गरिदिनुहोस्
+    - म [9841234567](receiver_number) मा फोन गर्न चाहन्छु
+    - फोन लगाइदिनुस् मलाई [9854321098](receiver_number) मा, जरूरी छ
+    - मलाई कल गर्नुहोस् [9843210987](receiver_number) मा आज
+    - म तुरुन्त [9845678901](receiver_number) मा फोन गर्नेछु
+    - के मलाई [9849876543](receiver_number) मा फोन लगाइदिन सकिन्छ?
+    - [9847654321](receiver_number) मा तुरुन्त फोन लगाइदिनुहोस्
+    - मैले बताएको नम्बर [9841234567](receiver_number) मा कल गरिदिनुस्
+    - [9809090000](receiver_number) लाई कल गर्नुस् न
