@@ -1,13 +1,17 @@
 version: '3.1'
 intents:
 - affirm
+- greet
+
+# --------------------------------------------------------------------------------------------------------------------------------
 - deny
 - make_call_name
 - make_call_number
 - multiple_contact_record_case
 - no_contact_record_case
 - send_message
-- greet
+# --------------------------------------------------------------------------------------------------------------------------------
+
 
 
 entities:
@@ -17,16 +21,7 @@ entities:
 - message_send_text
 
 slots:
-  receiver_name:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: receiver_name
-  receiver_number:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: receiver_number
+
   app_name:
     type: text
     mappings:
@@ -43,6 +38,21 @@ slots:
     - type: from_entity
       entity: amount
 
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
+  receiver_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: receiver_name
+
+  receiver_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: receiver_number
+      
   message_receiver_name:
     type: text
     influence_conversation: true
@@ -56,16 +66,29 @@ slots:
     mappings:
     - type: from_entity
       entity: message_send_text
+# --------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
 forms:
   message_send_form:
     ignored_intents: null
     required_slots:
     - message_receiver_name
     - message_send_text
+# --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 responses:
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
 # Utter responses related to calling process
   utter_no_contact_record_case:
     - text: क्षमा गर्नुहोस्, कुनै सम्पर्क रेकर्ड फेला परेन।
@@ -267,7 +290,15 @@ responses:
     - text: अहिले {receiver_number} मा फोन गर्दैछु, कृपया पर्खनुहोस्।
       custom:
         receiver_number: '{receiver_number}'
+# --------------------------------------------------------------------------------------------------------------------------------
 
+
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
 # Utter responses related to message process
   ## Utter response for message_receiver_name slot
   utter_ask_message_receiver_name:
@@ -446,14 +477,12 @@ responses:
         message_status: 'ask_message_send_text'
         message_receiver_name: '{message_receiver_name}'
 
-
   utter_message_submit:
     - text: Message is submitted
       custom:
         message_status: 'slot_filled'
         message_receiver_name: '{message_receiver_name}'
         message_send-text: '{message_send_text}'
-
 
   utter_message_receiver_name_deny:
     - text: सन्देश पठाउने प्रक्रिया रोकिएको छ।
@@ -475,6 +504,15 @@ responses:
     - text: म्यासेज पठाउने काम रद्द गरिएको छ।
     - text: कार्य रद्द भयो।
     - text: प्रक्रिया पूरा नभएकाले म्यासेज पठाइएन।
+# --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
   utter_ask_receiver_name:
     - text: Who do you want to send money to?
@@ -528,6 +566,17 @@ responses:
     - text: Hi I am Rasa. Goodmorning
 
 
+
+
+
+
+
+
+
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
+# Action nullfall back intent
   utter_fallback:
     - text: म माफी चाहन्छु, मैले ठीकसँग बुझिन। के तपाइँ फेरि भन्न सक्नुहुन्छ?
     - text: "क्षमा गर्नुहोस्, मैले बुझिन। कृपया पुन: प्रयास गर्नुहोस्।"
@@ -579,6 +628,18 @@ responses:
 # Action default fallback utter responses
   utter_default:
     - text: Invalid input! Enter valid input or want to stop process?
+      custom:
+        fallback_action: 'action_default_fallback'
+# --------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
 
 session_config:
   session_expiration_time: 60

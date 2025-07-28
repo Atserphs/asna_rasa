@@ -14,6 +14,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+
+
+# --------------------------------------------------------------------------------------------------------------------------------
 - intent: deny
   examples: |
     - no
@@ -137,6 +140,66 @@ nlu:
     - [मनोजलाई](message_receiver_name) म म्यासेज पठाउने छु
     - म [निशालाई](message_receiver_name) म्यासेज लेख्दैछु
     - म [समिरलाई](message_receiver_name) सन्देश पठाउने सोचमा छु
+
+    - message_receiver_name_content [Ramesh](message_receiver_name)
+    - message_receiver_name_content [Sushil](message_receiver_name)
+    - message_receiver_name_content [Anita](message_receiver_name)
+    - message_receiver_name_content [Deepak](message_receiver_name)
+    - message_receiver_name_content [Sabina](message_receiver_name)
+    - message_receiver_name_content [Raju](message_receiver_name)
+    - message_receiver_name_content [Maya](message_receiver_name)
+    - message_receiver_name_content [Sunita](message_receiver_name)
+    - message_receiver_name_content [रमेशलाई](message_receiver_name)
+    - message_receiver_name_content [सुशीललाई](message_receiver_name)
+    - message_receiver_name_content [अनिता](message_receiver_name)
+    - message_receiver_name_content [दिपकलाई](message_receiver_name)
+    - message_receiver_name_content [सविना](message_receiver_name)
+    - message_receiver_name_content [राजु](message_receiver_name)
+    - message_receiver_name_content [माया](message_receiver_name)
+    - message_receiver_name_content [सुनिता](message_receiver_name)
+    - message_receiver_name_content [किरणलाई](message_receiver_name)
+    - message_receiver_name_content [साजनलाई](message_receiver_name)
+    - message_receiver_name_content [कृष्णालाई](message_receiver_name)
+    - message_receiver_name_content [तारा](message_receiver_name)
+    - message_receiver_name_content [दीपा](message_receiver_name)
+    - message_receiver_name_content [सन्देशलाई](message_receiver_name)
+    - message_receiver_name_content [भानु](message_receiver_name)
+    - message_receiver_name_content [जगदीश](message_receiver_name)
+    - message_receiver_name_content [रवि](message_receiver_name)
+    - message_receiver_name_content [सानु](message_receiver_name)
+    - message_receiver_name_content [हेम](message_receiver_name)
+    - message_receiver_name_content [निशा](message_receiver_name)
+    - message_receiver_name_content [प्रेम](message_receiver_name)
+    - message_receiver_name_content [दिपा](message_receiver_name)
+    - message_receiver_name_content [रेशमलाई](message_receiver_name)
+    - message_receiver_name_content [गणेश](message_receiver_name)
+    - message_receiver_name_content [मिलनलाई](message_receiver_name)
+    - message_receiver_name_content [लक्ष्मी](message_receiver_name)
+    - message_receiver_name_content [हरि](message_receiver_name)
+    - message_receiver_name_content [सरस्वतीलाई](message_receiver_name)
+    - message_receiver_name_content [कपिललाई](message_receiver_name)
+    - message_receiver_name_content [सञ्जयलाई](message_receiver_name)
+    - message_receiver_name_content [देविका](message_receiver_name)
+    - message_receiver_name_content [दिवसलाई](message_receiver_name)
+    - message_receiver_name_content [सुनिललाई](message_receiver_name)
+    - message_receiver_name_content [गोपाल](message_receiver_name)
+    - message_receiver_name_content [पारस](message_receiver_name)
+    - message_receiver_name_content [कृष्णा](message_receiver_name)
+    - message_receiver_name_content [शिव](message_receiver_name)
+    - message_receiver_name_content [नारायणलाई](message_receiver_name)
+    - message_receiver_name_content [रिता](message_receiver_name)
+    - message_receiver_name_content [ललिता](message_receiver_name)
+    - message_receiver_name_content [शारदा](message_receiver_name)
+    - message_receiver_name_content [भुवन](message_receiver_name)
+    - message_receiver_name_content [शशिकला](message_receiver_name)
+    - message_receiver_name_content [विनय](message_receiver_name)
+    - message_receiver_name_content [प्रकाशलाई](message_receiver_name)
+    - message_receiver_name_content [शम्भु](message_receiver_name)
+    - message_receiver_name_content [अर्जुनलाई](message_receiver_name)
+    - message_receiver_name_content [मनोजलाई](message_receiver_name)
+    - message_receiver_name_content [निशालाई](message_receiver_name)
+    - message_receiver_name_content [समिरलाई](message_receiver_name)
+    - message_receiver_name_content [राम](message_receiver_name)
 
 
     - message_send_text_content [भोलि छुट्टी छ](message_send_text)
@@ -583,3 +646,4 @@ nlu:
     - [9847654321](receiver_number) मा तुरुन्त फोन लगाइदिनुहोस्
     - मैले बताएको नम्बर [9841234567](receiver_number) मा कल गरिदिनुस्
     - [9809090000](receiver_number) लाई कल गर्नुस् न
+# --------------------------------------------------------------------------------------------------------------------------------
